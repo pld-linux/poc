@@ -1,15 +1,17 @@
 Summary:	poc - a MP3 and Ogg streamer
 Summary(pl):	poc - program do generowania strumieni MP3 i Ogg
 Name:		poc
-Version:	0.3.7
+Version:	0.3.7.1
 Release:	0.1
 License:	GPL
 Group:		Applications/Sound
 Source0:	http://www.bl0rg.net/software/poc/%{name}-%{version}.tar.gz
-# Source0-md5:	948f337697160d6f510e2320db211031
+# Source0-md5:	d96ed857d3a9e075210653c434d655d1
+# Source0-size:	102983
 URL:		http://www.bl0rg.net/software/poc/
 BuildRequires:	autoconf
 BuildRequires:	automake
+BuildRequires:	bison
 BuildRequires:	gettext-devel
 BuildRequires:	libtool
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
