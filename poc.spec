@@ -55,9 +55,9 @@ wycinania CUE z MP3.
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man1}
 
-install {mp3cue,mp3cut,mp3length,pob-2250,pob-3119,pob-fec,poc-2250} \
-        {poc-2250-ploss,poc-3119,poc-3119-ploss,poc-fec,poc-fec-ploss} \
-	{poc-http,pogg-http,radio.sh} $RPM_BUILD_ROOT%{_bindir}
+install mp3cue mp3cut mp3length pob-2250 pob-3119 pob-fec poc-2250 \
+        poc-2250-ploss poc-3119 poc-3119-ploss poc-fec poc-fec-ploss \
+	poc-http pogg-http radio.sh $RPM_BUILD_ROOT%{_bindir}
 install man/man1/* $RPM_BUILD_ROOT%{_mandir}/man1
 
 %clean
