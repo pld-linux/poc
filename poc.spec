@@ -1,19 +1,25 @@
+#
+# TODO:
+# - Check license, this is really GPL?
+#
 Summary:	poc - a MP3 and Ogg streamer
 Summary(pl):	poc - program do generowania strumieni MP3 i Ogg
 Name:		poc
-Version:	0.3.7.1
+Version:	0.4.1
 Release:	0.1
 License:	GPL
 Group:		Applications/Sound
 Source0:	http://www.bl0rg.net/software/poc/%{name}-%{version}.tar.gz
-# Source0-md5:	d96ed857d3a9e075210653c434d655d1
-# Source0-size:	102983
+# Source0-md5:	f62f0fb5ed54796c5d60c11e92bae544
+Patch0:		%{name}-radio_script.patch
 URL:		http://www.bl0rg.net/software/poc/
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	bison
 BuildRequires:	gettext-devel
 BuildRequires:	libtool
+Requires:	buffer
+Requires:	nc
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -44,20 +50,23 @@ wycinania CUE z MP3.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
 %{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{_bindir}
+install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man1}
 
-install {mp3cue,pob-2250,pob-2250-rb,pob-3119,pob-3119-rb,pob-fec,poc-2250,poc-2250-ploss,poc-3119,poc-3119-ploss,poc-fec,poc-fec-ploss,poc-http,pogg-http,radio.sh} $RPM_BUILD_ROOT%{_bindir}
+install {mp3cue,mp3cut,mp3length,pob-2250,pob-3119,pob-fec,poc-2250,poc-2250-ploss,poc-3119,poc-3119-ploss,poc-fec,poc-fec-ploss,poc-http,pogg-http,radio.sh} $RPM_BUILD_ROOT%{_bindir}
+install man/man1/* $RPM_BUILD_ROOT%{_mandir}/man1
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc README README.mp3cue TODO
+%doc README TODO
 %attr(755,root,root) %{_bindir}/*
+%{_mandir}/man1/*
