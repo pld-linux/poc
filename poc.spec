@@ -1,13 +1,9 @@
-#
-# TODO:
-# - Check license, this is really GPL?
-#
 Summary:	poc - a MP3 and Ogg streamer
 Summary(pl):	poc - program do generowania strumieni MP3 i Ogg
 Name:		poc
 Version:	0.4.1
 Release:	0.1
-License:	GPL
+License:	distributable
 Group:		Applications/Sound
 Source0:	http://www.bl0rg.net/software/poc/%{name}-%{version}.tar.gz
 # Source0-md5:	f62f0fb5ed54796c5d60c11e92bae544
