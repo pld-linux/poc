@@ -12,6 +12,7 @@ URL:		http://www.bl0rg.net/software/poc/
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	bison
+BuildRequires:	flex
 BuildRequires:	gettext-devel
 BuildRequires:	libtool
 Requires:	buffer
