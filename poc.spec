@@ -1,5 +1,5 @@
 Summary:	poc - a MP3 and Ogg streamer
-Summary(pl):	poc - program do generowania strumieni MP3 i Ogg
+Summary(pl.UTF-8):   poc - program do generowania strumieni MP3 i Ogg
 Name:		poc
 Version:	0.4.1
 Release:	1
@@ -31,18 +31,18 @@ additional library. You need a C99 compiler though. poc is still beta
 software, IPv6 and Ogg support was not tested extensively. poc
 includes mp3cue, a MP3 CUE cutter.
 
-%description -l pl
-poc to program do generowania strumieni MP3 i Ogg obs³uguj±cy
-nastêpuj±ce protoko³y:
+%description -l pl.UTF-8
+poc to program do generowania strumieni MP3 i Ogg obsÅ‚ugujÄ…cy
+nastÄ™pujÄ…ce protokoÅ‚y:
  - HTTP (MP3 i Ogg)
  - RTP (RFC 2250) (tylko MP3)
  - RTP (RFC 3119) (tylko MP3)
- - w³asny protokó³ FEC (tylko MP3)
+ - wÅ‚asny protokÃ³Å‚ FEC (tylko MP3)
 
-Program powinien dzia³aæ na dowolnej platformie zgodnej z POSIX i nie
-wymaga ¿adnej dodatkowej biblioteki. Do zbudowania potrzebny jest
+Program powinien dziaÅ‚aÄ‡ na dowolnej platformie zgodnej z POSIX i nie
+wymaga Å¼adnej dodatkowej biblioteki. Do zbudowania potrzebny jest
 kompilator zgodny z C99. poc jest nadal w stadium beta, a IPv6 i Ogg
-nie by³y zbyt intensywnie testowane. poc zawiera mp3cue - program do
+nie byÅ‚y zbyt intensywnie testowane. poc zawiera mp3cue - program do
 wycinania CUE z MP3.
 
 %prep
